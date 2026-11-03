@@ -1,0 +1,6 @@
+{
+  "name": "Kopi Nusantara – Inventory & Point of Sale System",
+  "description": "Sistem manajemen inventaris toko, gudang, kasir POS, laporan penjualan, dan hak akses staf terintegrasi untuk Kopi Nusantara.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
