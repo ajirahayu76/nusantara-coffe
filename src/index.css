@@ -1,0 +1,226 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-serif: 'Fraunces', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+  }
+
+  body {
+    background-color: #FAF7F2;
+    color: #292524;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  html.dark body {
+    background-color: #120A06;
+    color: #FAF7F2;
+  }
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F5EFE6;
+}
+::-webkit-scrollbar-thumb {
+  background: #D7C4B7;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B89C8A;
+}
+
+/* Texture pattern for warm cafe vibe */
+.coffee-pattern {
+  background-image: radial-gradient(#d97706 0.75px, transparent 0.75px), radial-gradient(#d97706 0.75px, #faf7f2 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+  opacity: 0.05;
+}
+
+/* =========================================================
+   DARK THEME: Atmospheric Warm Espresso / Cafe Malam Theme
+   ========================================================= */
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #170E09;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #3D2418;
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #5A3523;
+}
+
+/* Background utilities in dark mode */
+html.dark .bg-\[\#FAF7F2\] {
+  background-color: #140B07 !important;
+}
+
+html.dark .bg-\[\#FAF7F2\]\/95 {
+  background-color: rgba(20, 11, 7, 0.95) !important;
+}
+
+html.dark .bg-white {
+  background-color: #1F130B !important;
+}
+
+html.dark .bg-\[\#EFE8DD\] {
+  background-color: #2A1910 !important;
+}
+
+html.dark .bg-\[\#E7DFD5\] {
+  background-color: #382216 !important;
+}
+
+/* Border utilities in dark mode */
+html.dark .border-\[\#E7DFD5\],
+html.dark .border-\[\#EFE8DD\],
+html.dark .border-\[\#D7C4B7\] {
+  border-color: #382216 !important;
+}
+
+html.dark .border-gray-200,
+html.dark .border-gray-300 {
+  border-color: #382216 !important;
+}
+
+html.dark .divide-\[\#E7DFD5\] > :not([hidden]) ~ :not([hidden]),
+html.dark .divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #382216 !important;
+}
+
+/* Text colors in dark mode */
+html.dark .text-\[\#292524\],
+html.dark .text-stone-900,
+html.dark .text-gray-900 {
+  color: #FAF7F2 !important;
+}
+
+html.dark .text-\[\#44403C\],
+html.dark .text-stone-800,
+html.dark .text-gray-800 {
+  color: #EFE8DD !important;
+}
+
+html.dark .text-\[\#57534E\],
+html.dark .text-stone-700,
+html.dark .text-gray-700 {
+  color: #D3C4B6 !important;
+}
+
+html.dark .text-\[\#78716C\],
+html.dark .text-stone-600,
+html.dark .text-gray-600 {
+  color: #A39385 !important;
+}
+
+html.dark .text-\[\#A8A29E\],
+html.dark .text-stone-500,
+html.dark .text-gray-500 {
+  color: #8C7D70 !important;
+}
+
+/* Interactive hover backgrounds in dark mode */
+html.dark .hover\:bg-\[\#EFE8DD\]:hover,
+html.dark .hover\:bg-\[\#E7DFD5\]:hover,
+html.dark .hover\:bg-gray-100:hover,
+html.dark .hover\:bg-gray-50:hover {
+  background-color: #2D1A10 !important;
+}
+
+/* Form inputs & dropdowns in dark mode */
+html.dark input:not([type="checkbox"]):not([type="radio"]),
+html.dark select,
+html.dark textarea {
+  background-color: #1F130B !important;
+  color: #FAF7F2 !important;
+  border-color: #382216 !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #8C7D70 !important;
+}
+
+/* Preserve thermal paper ink readability even when app is in Dark Mode */
+html.dark #thermal-receipt {
+  background-color: #FCFBF8 !important;
+  color: #1C1917 !important;
+}
+
+html.dark #thermal-receipt .text-\[\#292524\],
+html.dark #thermal-receipt .text-\[\#1C1917\],
+html.dark #thermal-receipt .text-\[\#451A03\] {
+  color: #1C1917 !important;
+}
+
+html.dark #thermal-receipt .text-\[\#44403C\] {
+  color: #44403C !important;
+}
+
+html.dark #thermal-receipt .text-\[\#57534E\] {
+  color: #57534E !important;
+}
+
+html.dark #thermal-receipt .text-\[\#78716C\],
+html.dark #thermal-receipt .text-\[\#A8A29E\] {
+  color: #78716C !important;
+}
+
+html.dark #thermal-receipt .bg-white {
+  background-color: #FFFFFF !important;
+}
+
+html.dark #thermal-receipt .border-\[\#D7C4B7\],
+html.dark #thermal-receipt .border-\[\#E7DFD5\] {
+  border-color: #D7C4B7 !important;
+}
+
+/* Thermal receipt stays authentic light paper in print */
+@media print {
+  header, footer, .no-print, button, input[type="range"] {
+    display: none !important;
+  }
+  body, main {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  #thermal-receipt {
+    width: 100% !important;
+    max-width: 320px !important;
+    margin: 0 auto !important;
+    border: none !important;
+    padding: 8px !important;
+  }
+}

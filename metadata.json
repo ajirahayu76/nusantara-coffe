@@ -1,0 +1,8 @@
+{
+  "name": "Salam Kopi - Kedai Kopi & Specialty Coffee Nusantara",
+  "description": "Website resmi Salam Kopi - Jelajahi menu kopi spesial nusantara, pesan online (Dine-in, Pick-up, Delivery), seduh manual brew, dan temukan racikan kopi favoritmu.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
